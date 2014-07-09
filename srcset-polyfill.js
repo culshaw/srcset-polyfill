@@ -41,12 +41,13 @@
 
             image.src = filename;
         }
+        return true;
     }
 
 
     var images = document.getElementsByTagName('img');
 
     for (var i=0; i < images.length; i++) {
-        srcset(images[i]);
+        if(!srcset(images[i])) break;
     }
 })(window, document);
